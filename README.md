@@ -10,4 +10,4 @@ The data comes from https://data.iowa.gov/Sales-Distribution/Iowa-Liquor-Sales/m
 
 Class "E" liquor license, for grocery stores, liquor stores, convenience stores, etc., allows commercial establishments to sell liquor for off-premises consumption in original unopened containers.
 
-Data was cleaned, processed, and transformed using SQLiteStudio and then imported into Tableau for visuals. [Link to dashboard on Tableau](https://public.tableau.com/app/profile/marshall.podgurski/viz/IowaLiquorSales_16670223272870/Dashboard1)
+Data was cleaned, processed, and transformed using SQLiteStudio and then imported into Tableau for visuals. [Link to Tableau dashboard](https://public.tableau.com/app/profile/marshall.podgurski/viz/IowaLiquorSales_16670223272870/Dashboard1)
