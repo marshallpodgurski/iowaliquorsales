@@ -13,11 +13,10 @@ state bottle retail, bottles sold, sale, volume sold(Liters), volume sold(Gallon
 
 After checking to make sure the data types are all okay, I look for any null values.  
 
-```
-SELECT *
+```SELECT *
 FROM liquorsales
-WHERE invoice IS NULL
-```
+WHERE invoice IS NULL```
+
 The above query is used for each attribute, replacing "invoice" with whichever column I next search. 
 Fortunately, all the attributes except "county" have no null values. 
 County returned ~45000 missing values. These values will need to be found and filled in. 
