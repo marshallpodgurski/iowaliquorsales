@@ -7,9 +7,25 @@ Shareholders are interested in learning
 
 ## Browse and clean data
 
-The table contains 24 attributes; Invoice(primary key), date, store number, store name, address, city, zip code, store location, county number,
-county, category, vendor name, vendor number, item number, item description, pack, bottle volume, state bottle cost, 
-state bottle retail, bottles sold, sale, volume sold(Liters), volume sold(Gallons)
+The table contains 24 attributes. The relevant ones needed for our project are 
+invoice(primary key) - every liquor purchase has it's own unique invoice number
+date - date of purchase 
+store_number - every store has it's own unique ID number
+store name  , county number,
+county -  name of the county where purchase took place
+county_number - each county has it's own unique ID number 
+category - seven digit number that categorizes what type of alcohol is sold. More about this at prompt #4 
+vendor_name - company name that own's the brand (Luxco Inc, Diageo Americas, Sazerac Company Inc, etc) 
+vendor_number - each vendor name has it's own unique ID number
+item_description - What product is being sold (Hawkeye's Vodka, Crown Royale, Grey Goose)
+item_number - each specific product has it's own unique ID number (Tito's Vodka 750ml bottle and a Tito Vodka 1L bottle will have different numbers) 
+bottle volume 
+state bottle cost
+state bottle retail
+sale 
+volume sold(Liters) 
+
+Other attributes not needed but useful - address, city, zip_code, store_location,pack, bottles_sold, volume_sold(Gallons)
 
 To look for any null values, the below query is used and the WHERE clause modified for each attribute. 
 
@@ -108,7 +124,7 @@ LIMIT 10
 The attribute "category" uses a numeric code to log what type of alcohol the liquor. Numbers that begin with 101 are Whiskey, 102 are 
 Tequila/Mezcal, 103 are Vodka, etc.
 
-I wrote two queries that add a new column called alcohol_type which identifies what  
+I wrote two queries that add a new column called **alcohol_type** and translates the category numeric code into a string value (whiskey, vodka, etc) 
 
 ```
 UPDATE liquorsales
