@@ -2,7 +2,7 @@
 
 Three years of Iowa Liquor Sales (2019-2021) data was explored, modified and visualized using SQL and Tableau. The shareholders for this project wanted to know the following...
 - How much liquor was sold($) per year
-- What were the top selling items by sales($) and by volume(L)
+- What were the top selling items by sales count and by volume(L)
 - What counties sold the most liquor
 - What type of alcohol(whiskey, gin, vodka, etc...) was most popular
 
