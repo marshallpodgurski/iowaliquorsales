@@ -8,21 +8,37 @@ Shareholders are interested in learning
 ## Browse and clean data
 
 The table contains 24 attributes. The relevant ones needed for our project are 
+
 invoice(primary key) - every liquor purchase has it's own unique invoice number
+
 date - date of purchase 
+
 store_number - every store has it's own unique ID number
+
 store name  , county number,
+
 county -  name of the county where purchase took place
+
 county_number - each county has it's own unique ID number 
+
 category - seven digit number that categorizes what type of alcohol is sold. More about this at prompt #4 
+
 vendor_name - company name that own's the brand (Luxco Inc, Diageo Americas, Sazerac Company Inc, etc) 
+
 vendor_number - each vendor name has it's own unique ID number
+
 item_description - What product is being sold (Hawkeye's Vodka, Crown Royale, Grey Goose)
+
 item_number - each specific product has it's own unique ID number (Tito's Vodka 750ml bottle and a Tito Vodka 1L bottle will have different numbers) 
+
 bottle volume 
+
 state bottle cost
+
 state bottle retail
+
 sale 
+
 volume sold(Liters) 
 
 Other attributes not needed but useful - address, city, zip_code, store_location,pack, bottles_sold, volume_sold(Gallons)
