@@ -57,8 +57,8 @@ WHERE invoice IS NULL
 Fortunately, all the attributes except "county" have no null values. 
 County returned ~45,000 missing values. These values will need to be filled in. 
 
-There are a few ways to solve this, but I will be using the store_number column. I write a query to see how many store_numbers are represented
-by the NULL county values.
+There are a few ways to solve this, but I will be utilizing the store_number column. I write a query to see how many store_numbers are represented
+by the NULL county values. 
 
 ```
 SELECT DISTINCT store_number,COUNT(store_number)
@@ -66,8 +66,7 @@ FROM liquorsales
 WHERE county IS NULL
 GROUP BY store_number 
 ```
-49 store numbers are returned from this query. Now that I have the store numbers, I can use them to search for any invoice that 
-contains them. 
+49 different store numbers are returned from this query. I can search for these store numbers and see if other entries have the associated county filled in. Example below. 
 
 ```
 SELECT DISTINCT county,store_number, store_name, city
@@ -83,15 +82,16 @@ SET County = 'BUENA VISTA'
 WHERE store_number=6229
 ```
 
-I do these series of queries for all 49 store numbers and so all 45,000 missing county values are filled in. 
+I do this set of queries for all 49 store numbers and so all 45,000 missing county values are filled in. 
 
-To double check my work, I Google and see that Iowa has 99 counties however the table recognizes 124 counties after running the next query. 
+To double check my work, I Google and see that Iowa has 99 counties. I run a query to see how many my table contains. The table recognizes 124 counties.  
 
 ```
 SELECT DISTINCT county
 FROM liquorsales
+ORDER BY county
 ```
-This is due to incosistent entries (spelling, spaces, and capitalization) so need to update the table.
+After looking through the results, the extra 25 counties are due to incosistent entries (spelling, spaces, and capitalization) so I need to update the table. Examples below. 
 
 ```
 UPDATE liquorsales
@@ -140,7 +140,7 @@ LIMIT 10
 ```
 ## 4. What type of alcohol(whiskey, gin, vodka, etc...) was most popular
 
-The attribute "category" uses a numeric code to log what type of alcohol the liquor. Numbers that begin with 101 are Whiskey, 102 are 
+The column "category" uses a numeric code to log what type of alcohol the liquor is. Numbers that begin with 101 are Whiskey, 102 are 
 Tequila/Mezcal, 103 are Vodka, etc.
 
 I wrote two queries that add a new column called **alcohol_type** and translates the category numeric code into a string value (whiskey, vodka, etc) 
@@ -171,5 +171,5 @@ UPDATE liquorsales
         END
 ```
 
-After reading this, check out the dashboard created using this data back in the repository
+If you made it this far, please check out the interactive dashboard I created and linked under the readme page in the repository! Thank you!
 
