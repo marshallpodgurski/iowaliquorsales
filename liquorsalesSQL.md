@@ -43,7 +43,10 @@ The table contains 24 attributes. The relevant ones needed for our project are
 
 Other attributes not needed but useful - address, city, zip_code, store_location,pack, bottles_sold, volume_sold(Gallons)
 
-To look for any null values, the below query is used and the WHERE clause modified for each attribute. 
+
+-------------------------------------------
+
+To start, I'm going to look for any null values. The below query is used and the WHERE clause modified for each attribute. 
 
 ```
 SELECT *
